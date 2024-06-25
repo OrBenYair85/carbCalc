@@ -6,8 +6,6 @@ import CarbSearch from './comp/homeScreen/carbfinder';
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <CarbSearch />
     </div>
   );
 }

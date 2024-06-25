@@ -2,7 +2,7 @@
 const apiKey = 'gSVkUvNqEAfb3iatE2dY0Q==EpOjusY1pNY6jgNb'//API key of calorieninjas
 const data = '1 egg';// the data of the food
 var url = 'https://api.calorieninjas.com/v1/nutrition?query=' + data; //the URL api
-let carbohydratesTotal = 0;
+let TotalCarbs = 0;
 
 fetch(url, {
     method: 'GET',
@@ -20,7 +20,7 @@ fetch(url, {
 .then(data => {
     console.log(data);
     const firstItem = data.items[0];
-    carbohydratesTotal = firstItem.carbohydrates_total_g;
+    TotalCarbs = firstItem.carbohydrates_total_g;
     console.log('Total Carbohydrates:', carbohydratesTotal)
 })
 .catch(error => {
